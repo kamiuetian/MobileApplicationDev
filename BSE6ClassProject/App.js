@@ -4,20 +4,25 @@ import { useState } from "react";
 import { MyCustomComponent3 } from "./Components/MyCustonComponent3";
 import MyText from "./Components/Lecture8/MyText";
 import LoginForm from "./Components/Lecture8/LoginForm";
+import TouchablesLec from "./Components/Lecture9/TouchablesLec";
+import Flexboxcomp from "./Components/Lecture10/Flexboxcomp";
 export default function App() {
   return (
     //jsx
     <>
-      <SafeAreaView>
+      <View style={{ flex: 1 }}>
+        <Flexboxcomp></Flexboxcomp>
+        {/**Lecture 9 */}
+        {/*<TouchablesLec></TouchablesLec>*/}
         {/**Lecture 8 */}
-        <MyText>this is My Custom Text</MyText>
+        {/*<MyText>this is My Custom Text</MyText>
         <MyText>this is My description</MyText>
-        <LoginForm></LoginForm>
+        <LoginForm></LoginForm>*}
         {/* <MyCustomComponent person="ALi" age="30"></MyCustomComponent>
         <MyCustomComponent2 person="ALi" age="30"></MyCustomComponent2>
 
         <StatusBar style="auto" />*/}
-      </SafeAreaView>
+      </View>
     </>
   );
 }
