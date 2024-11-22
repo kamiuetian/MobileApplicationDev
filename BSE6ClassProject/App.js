@@ -1,3 +1,4 @@
+import "./gesture-handler";
 import { StatusBar } from "expo-status-bar";
 import { Button, StyleSheet, Text, View, SafeAreaView } from "react-native";
 import { useState } from "react";
@@ -6,12 +7,24 @@ import MyText from "./Components/Lecture8/MyText";
 import LoginForm from "./Components/Lecture8/LoginForm";
 import TouchablesLec from "./Components/Lecture9/TouchablesLec";
 import Flexboxcomp from "./Components/Lecture10/Flexboxcomp";
+import FlatListComp from "./Components/Lecture11/FlatListComp";
+import NavigationLec from "./Components/Lecture12/NavigationLec";
+import TabBarNavigationExample from "./Components/Lecture13/TabBarNavigationExample";
+import { NavigationContainer } from "@react-navigation/native";
+import DrawerNavigationExample from "./Components/Lecture14/DrawerNavigationExample";
+import AsycStoreExample from "./Components/Lecture15/AsycStoreExample";
 export default function App() {
   return (
     //jsx
     <>
       <View style={{ flex: 1 }}>
-        <Flexboxcomp></Flexboxcomp>
+        <AsycStoreExample></AsycStoreExample>
+        {/* <DrawerNavigationExample></DrawerNavigationExample> */}
+        {/* <TabBarNavigationExample></TabBarNavigationExample> */}
+
+        {/*<NavigationLec></NavigationLec>*/}
+        {/*<FlatListComp></FlatListComp>*}
+        {/**<Flexboxcomp></Flexboxcomp>*/}
         {/**Lecture 9 */}
         {/*<TouchablesLec></TouchablesLec>*/}
         {/**Lecture 8 */}
