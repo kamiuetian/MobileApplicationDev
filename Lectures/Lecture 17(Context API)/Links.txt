@@ -1,0 +1,2 @@
+https://www.freecodecamp.org/news/how-to-use-react-context/
+https://www.w3schools.com/react/react_usecontext.asp

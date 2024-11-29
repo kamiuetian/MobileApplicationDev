@@ -13,12 +13,14 @@ import TabBarNavigationExample from "./Components/Lecture13/TabBarNavigationExam
 import { NavigationContainer } from "@react-navigation/native";
 import DrawerNavigationExample from "./Components/Lecture14/DrawerNavigationExample";
 import AsycStoreExample from "./Components/Lecture15/AsycStoreExample";
+import ApiAxios from "./Components/Lecture16/ApiAxios";
 export default function App() {
   return (
     //jsx
     <>
       <View style={{ flex: 1 }}>
-        <AsycStoreExample></AsycStoreExample>
+        <ApiAxios></ApiAxios>
+        {/* <AsycStoreExample></AsycStoreExample> */}
         {/* <DrawerNavigationExample></DrawerNavigationExample> */}
         {/* <TabBarNavigationExample></TabBarNavigationExample> */}
 
