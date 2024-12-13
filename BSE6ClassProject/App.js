@@ -14,31 +14,37 @@ import { NavigationContainer } from "@react-navigation/native";
 import DrawerNavigationExample from "./Components/Lecture14/DrawerNavigationExample";
 import AsycStoreExample from "./Components/Lecture15/AsycStoreExample";
 import ApiAxios from "./Components/Lecture16/ApiAxios";
+import { Store } from "./store";
+import { Provider } from "react-redux";
+import ReduxExample from "./Components/Lecture 18/ReduxExample";
 export default function App() {
   return (
     //jsx
-    <>
-      <View style={{ flex: 1 }}>
-        <ApiAxios></ApiAxios>
-        {/* <AsycStoreExample></AsycStoreExample> */}
-        {/* <DrawerNavigationExample></DrawerNavigationExample> */}
-        {/* <TabBarNavigationExample></TabBarNavigationExample> */}
+    <Provider store={Store}>
+      <>
+        <View style={{ flex: 1 }}>
+          <ReduxExample></ReduxExample>
+          {/* <ApiAxios></ApiAxios> */}
+          {/* <AsycStoreExample></AsycStoreExample> */}
+          {/* <DrawerNavigationExample></DrawerNavigationExample> */}
+          {/* <TabBarNavigationExample></TabBarNavigationExample> */}
 
-        {/*<NavigationLec></NavigationLec>*/}
-        {/*<FlatListComp></FlatListComp>*}
+          {/*<NavigationLec></NavigationLec>*/}
+          {/*<FlatListComp></FlatListComp>*}
         {/**<Flexboxcomp></Flexboxcomp>*/}
-        {/**Lecture 9 */}
-        {/*<TouchablesLec></TouchablesLec>*/}
-        {/**Lecture 8 */}
-        {/*<MyText>this is My Custom Text</MyText>
+          {/**Lecture 9 */}
+          {/*<TouchablesLec></TouchablesLec>*/}
+          {/**Lecture 8 */}
+          {/*<MyText>this is My Custom Text</MyText>
         <MyText>this is My description</MyText>
         <LoginForm></LoginForm>*}
         {/* <MyCustomComponent person="ALi" age="30"></MyCustomComponent>
         <MyCustomComponent2 person="ALi" age="30"></MyCustomComponent2>
 
         <StatusBar style="auto" />*/}
-      </View>
-    </>
+        </View>
+      </>
+    </Provider>
   );
 }
 //{person:"", age:""}}
