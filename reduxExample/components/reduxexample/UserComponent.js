@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchUserRequest } from "../redux/reducers/userActions";
+import { fetchUserRequest } from "../../redux/reducers/userActions";
 
 const UserComponent = () => {
   const dispatch = useDispatch();

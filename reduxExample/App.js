@@ -1,15 +1,13 @@
 import React from "react";
 import { SafeAreaView, ScrollView, StyleSheet, Text } from "react-native";
-import TaskForm from "./components/TaskForm";
-import ProjectList from "./components/ProjectList";
-import LoginScreen from "./components/LoginScreen";
-import RegisterScreen from "./components/RegisterScreen";
-import BluetoothPrinter from "./components/BluetoothPrinter";
+
+import LocationComponent from "./components/locationExample/LocationComponent";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <BluetoothPrinter></BluetoothPrinter>
+      {/* <BluetoothPrinter></BluetoothPrinter> */}
+      <LocationComponent />
       {/* <ScrollView>
         <Text style={styles.header}>Task List with Firebase</Text>
         <TaskForm />
