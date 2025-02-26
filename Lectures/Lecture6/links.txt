@@ -1,6 +1,0 @@
-Expo
-https://docs.expo.dev/get-started/introduction/
-React native:
-https://reactnative.dev/docs/environment-setup
-genymotion:
-https://www.genymotion.com
