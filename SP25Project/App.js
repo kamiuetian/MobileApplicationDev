@@ -1,40 +1,62 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View, Text, Button } from "react-native";
-import { useState } from "react";
-import Greeting from "./Components/Greeting";
-import Task from "./Components/Class25-03/Task";
-export default function App() {
-  const [greeting, SetGreeting] = useState("Hello world");
+// In App.js in a new project
 
-  //let greeting = "Hello world";
+import * as React from "react";
+import { View, Text, Button, TextInput } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+function HomeScreen({ navigation }) {
   return (
-    //jsx
-    <View style={styles.container}>
-      <Task count={count} setCount={setCount} />
-      <Text>Count: {props.count}</Text>
-      <Button title="counter" onPress={() => props.setCount(props.count + 1)} />
-      {/*<Task />*/}
-      {/*<Greeting name="kamran" message={greeting} />
-      <Greeting name="ali" message={greeting} />
-      <Greeting name="ahmed" message={greeting} />*/}
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <Text>Home Screen</Text>
+      <Button
+        title="Go to Screen Details"
+        onPress={() => {
+          navigation.navigate("Details", { name: "Details" });
+        }}
+      ></Button>
     </View>
   );
 }
-/*Greeting compoents */
-/* function Greeting(props) {
-  console.log(props);
+function DetailsScreen({ navigation, route }) {
+  //const [myparam, setMyParam] = React.useState();
+  //setMyParam(route.params.name);
   return (
-    <>
-      <Text> {props.message}</Text>;<Text> Goodbye</Text>;
-    </>
-  );
-} */ //styles
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <Text>Data reeived from Home :</Text>
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+      <Button
+        title="Go to Home"
+        onPress={() => {
+          //navigation.navigate("Home", {name:myparam});
+          //navigation.popTo("Home", { name: myparam });
+          //navigation.goBack();
+          navigation.popToTop();
+          //navigation.push("Details");
+        }}
+      ></Button>
+    </View>
+  );
+}
+
+const Stack = createNativeStackNavigator();
+
+export default function App() {
+  let conf = {
+    headerStyle: { backgroundColor: "#f4511e" },
+    headerTintColor: "white",
+  };
+  /**()title:abc, headerStyle:ddsdss */
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home" screenOptions={conf}>
+        <Stack.Screen
+          name="Details"
+          component={DetailsScreen}
+          options={({ route }) => {}}
+        />
+        <Stack.Screen name="Home" component={HomeScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
